@@ -1,10 +1,13 @@
 package com.example.gocook_;
 
+import static androidx.core.content.PackageManagerCompat.LOG_TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,28 +34,39 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mEmailView = (EditText) findViewById(R.id.login_email);                 // 아이디 입력 칸
-        mPwdView = (EditText) findViewById(R.id.login_pwd);                     // 비밀번호 입력 칸
-        mLoginBtn = (Button) findViewById(R.id.btn_login);                      // 로그인 버튼
+            mEmailView = (EditText) findViewById(R.id.login_email);                 // 아이디 입력 칸
+            mPwdView = (EditText) findViewById(R.id.login_pwd);                     // 비밀번호 입력 칸
+            mLoginBtn = (Button) findViewById(R.id.btn_login);                      // 로그인 버튼
 
-        mJoinBtn = (TextView) findViewById(R.id.btn_join);                      // 회원가입 버튼
-        mJoinBtnicon = (ImageView) findViewById(R.id.icon_join);                // 회원가입 아이콘
+            mJoinBtn = (TextView) findViewById(R.id.btn_join);                      // 회원가입 버튼
+            mJoinBtnicon = (ImageView) findViewById(R.id.icon_join);                // 회원가입 아이콘
 
-        mManagerLoginBtn = (TextView) findViewById(R.id.btn_mlogin);            // 관리자 로그인 버튼
-        mManagerLoginBtnicon = (ImageView) findViewById(R.id.icon_mlogin);      // 관리자 로그인 아이콘
+            mManagerLoginBtn = (TextView) findViewById(R.id.btn_mlogin);            // 관리자 로그인 버튼
+            mManagerLoginBtnicon = (ImageView) findViewById(R.id.icon_mlogin);      // 관리자 로그인 아이콘
 
 
-        mLoginBtn.setOnClickListener(new View.OnClickListener() {
+            mLoginBtn.setOnClickListener(new View.OnClickListener() {
+
+
+
             @Override
             public void onClick(View v) {
                 String check_id = mEmailView.getText().toString();
                 String check_pw = mPwdView.getText().toString();
+
                 String sup_id = "1234";
                 String sup_pw = "4321";
 
-                if (check_id.equals(sup_id) && check_pw.equals(sup_pw)){
+                boolean a = check_id.equals(sup_id);
+                boolean b = check_pw.equals(sup_pw);
+
+                if(check_id.equals(sup_id) && check_pw.equals(sup_pw)){
                     Toast myToast = Toast.makeText(getApplicationContext() ,"hi", Toast.LENGTH_SHORT);
                     myToast.show();
+                }else{
+                    Toast myToast = Toast.makeText(getApplicationContext() ,"bye", Toast.LENGTH_SHORT);
+                    myToast.show();
+
                 }
             }
         });
