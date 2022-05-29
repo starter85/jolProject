@@ -10,14 +10,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private EditText mEmailView;            // 아이디 입력 칸
     private EditText mPwdView;              // 비밀번호 입력 칸
     private Button mLoginBtn;               // 로그인 버튼
+
     private TextView mJoinBtn;              // 회원가입 버튼
     private ImageView mJoinBtnicon;         // 회원가입 아이콘
+
     private TextView mManagerLoginBtn;      // 관리자 로그인 버튼
     private ImageView mManagerLoginBtnicon; // 관리자 로그인 아이콘
 
@@ -38,6 +41,21 @@ public class MainActivity extends AppCompatActivity {
         mManagerLoginBtn = (TextView) findViewById(R.id.btn_mlogin);            // 관리자 로그인 버튼
         mManagerLoginBtnicon = (ImageView) findViewById(R.id.icon_mlogin);      // 관리자 로그인 아이콘
 
+
+        mLoginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String check_id = mEmailView.getText().toString();
+                String check_pw = mPwdView.getText().toString();
+                String sup_id = "1234";
+                String sup_pw = "4321";
+
+                if (check_id.equals(sup_id) && check_pw.equals(sup_pw)){
+                    Toast myToast = Toast.makeText(getApplicationContext() ,"hi", Toast.LENGTH_SHORT);
+                    myToast.show();
+                }
+            }
+        });
 
 
         // 회원가입 로그인 버튼 클릭 이벤트
