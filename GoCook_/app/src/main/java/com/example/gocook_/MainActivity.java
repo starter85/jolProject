@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mManagerLoginBtn;      // 관리자 로그인 버튼
     private ImageView mManagerLoginBtnicon; // 관리자 로그인 아이콘
 
-
+    int i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
