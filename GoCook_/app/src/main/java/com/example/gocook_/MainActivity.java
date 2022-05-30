@@ -3,7 +3,6 @@ package com.example.gocook_;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         mEmailView = (EditText) findViewById(R.id.login_email);                 // 아이디 입력 칸
         mPwdView = (EditText) findViewById(R.id.login_pwd);                     // 비밀번호 입력 칸

@@ -86,7 +86,7 @@
 
         <ImageView
             android:id="@+id/icon_join"
-            android:layout_width="15dp"
+            android:layout_width="16dp"
             android:layout_height="15dp"
             android:layout_marginLeft="5dp"
             android:clickable="true"
@@ -114,7 +114,6 @@
             android:layout_marginLeft="5dp"
             android:clickable="true"
             android:src="@drawable/setting" />
-
 
     </LinearLayout>
 
