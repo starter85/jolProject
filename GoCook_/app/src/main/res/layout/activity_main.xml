@@ -42,7 +42,7 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/login_email"
+            android:id="@+id/login_pwd"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:background="#00000000"
