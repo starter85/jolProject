@@ -39,11 +39,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MemberLoginActivity"/>
         <activity android:name=".JoinActivity"/>
         <activity android:name=".ManagerLoginActivity"/>
         <activity android:name=".UserThingActivity"/>
         <activity android:name=".ocrActivity"/>
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>

@@ -56,7 +56,7 @@ public class ocrActivity extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MemberLoginActivity.class);
                 startActivity(intent); // 첫 화면 호출
             }
         });
