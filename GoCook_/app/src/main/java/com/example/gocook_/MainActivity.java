@@ -1,13 +1,9 @@
 package com.example.gocook_;
 
-import static androidx.core.content.PackageManagerCompat.LOG_TAG;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.member_login);
 
             mEmailView = (EditText) findViewById(R.id.login_email);                 // 아이디 입력 칸
             mPwdView = (EditText) findViewById(R.id.login_pwd);                     // 비밀번호 입력 칸
@@ -54,12 +50,12 @@ public class MainActivity extends AppCompatActivity {
                 String sup_pw = "111";
 
                 if(check_id.equals(sup_id) && check_pw.equals(sup_pw)){
-                    Toast myToast = Toast.makeText(getApplicationContext() ,"hi", Toast.LENGTH_SHORT);
+                    Toast myToast = Toast.makeText(getApplicationContext() ,"000님 환영합니다", Toast.LENGTH_SHORT);
                     myToast.show();
                     Intent intent = new Intent(getApplicationContext(), ocrActivity.class);
                     startActivity(intent); // ocr 화면 호출
                 }else{
-                    Toast myToast = Toast.makeText(getApplicationContext() ,"bye", Toast.LENGTH_SHORT);
+                    Toast myToast = Toast.makeText(getApplicationContext() ,"잘못 입력되었습니다.", Toast.LENGTH_SHORT);
                     myToast.show();
 
                 }
