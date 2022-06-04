@@ -118,18 +118,20 @@
                 android:textSize="45px"
                 android:textStyle="bold" />
 
-            <EditText
+            <TextView
+                android:id="@+id/noodleWeight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/nanumgothic"
-                android:text="80g"
+                android:text="0g"
                 android:textColor="#707070"
                 android:textSize="45px"
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/noodle_one"
                 android:layout_width="65dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="30dp"
@@ -142,6 +144,7 @@
             </Button>
 
             <Button
+                android:id="@+id/noodle_two"
                 android:layout_width="65dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
@@ -154,6 +157,7 @@
             </Button>
 
             <Button
+                android:id="@+id/noodle_three"
                 android:layout_width="65dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
@@ -236,18 +240,20 @@
                 android:textSize="45px"
                 android:textStyle="bold" />
 
-            <EditText
+            <TextView
+                android:id="@+id/souceWight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/nanumgothic"
-                android:text="153g"
+                android:text="0g"
                 android:textColor="#707070"
                 android:textSize="45px"
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/souce_one"
                 android:layout_width="67dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="35dp"
@@ -256,10 +262,10 @@
                 android:fontFamily="@font/nanumgothic"
                 android:text=" 기본 "
                 android:textStyle="bold">
-
             </Button>
 
             <Button
+                android:id="@+id/souce_three"
                 android:layout_width="65dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="40dp"
@@ -268,7 +274,6 @@
                 android:fontFamily="@font/nanumgothic"
                 android:text=" 3인 "
                 android:textStyle="bold">
-
             </Button>
 
         </LinearLayout>
