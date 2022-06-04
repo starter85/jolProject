@@ -45,24 +45,19 @@ public class MainActivity extends AppCompatActivity {
             mManagerLoginBtnicon = (ImageView) findViewById(R.id.icon_mlogin);      // 관리자 로그인 아이콘
 
 
-            mLoginBtn.setOnClickListener(new View.OnClickListener() {
-
-
-
+        mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String check_id = mEmailView.getText().toString();
                 String check_pw = mPwdView.getText().toString();
-
-                String sup_id = "1234";
-                String sup_pw = "4321";
-
-                boolean a = check_id.equals(sup_id);
-                boolean b = check_pw.equals(sup_pw);
+                String sup_id = "111";
+                String sup_pw = "111";
 
                 if(check_id.equals(sup_id) && check_pw.equals(sup_pw)){
                     Toast myToast = Toast.makeText(getApplicationContext() ,"hi", Toast.LENGTH_SHORT);
                     myToast.show();
+                    Intent intent = new Intent(getApplicationContext(), ocrActivity.class);
+                    startActivity(intent); // ocr 화면 호출
                 }else{
                     Toast myToast = Toast.makeText(getApplicationContext() ,"bye", Toast.LENGTH_SHORT);
                     myToast.show();

@@ -2,6 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gocook_">
 
+
+    <!-- 카메라 기능 사용  , 반드시 카메라 필 -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <!-- 카메라 원본 크기의 사진 저장 기능 사용 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +21,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GoCook_">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.gocook_.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
         <activity
             android:name=".IntroActivity"
             android:exported="true">
@@ -22,6 +43,7 @@
         <activity android:name=".JoinActivity"/>
         <activity android:name=".ManagerLoginActivity"/>
         <activity android:name=".UserThingActivity"/>
+        <activity android:name=".ocrActivity"/>
     </application>
 
 </manifest>
