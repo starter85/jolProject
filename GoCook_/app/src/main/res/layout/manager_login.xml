@@ -36,7 +36,7 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/login_email"
+            android:id="@+id/et_email"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -53,7 +53,7 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/login_pwd"
+            android:id="@+id/et_pwd"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:background="#00000000"

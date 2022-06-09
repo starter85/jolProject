@@ -38,7 +38,6 @@ public class ocrActivity extends AppCompatActivity {
     private TessBaseAPI mTess; // Tess API reference
     String datapath = ""; // 언어데이터가 있는 경로
 
-//    Button btn_picture; // 사진 찍는 버튼
     Button btn_ocr; // 텍스트 추출 버튼
 
     private String imageFilePath; // 이미지 파일 경로

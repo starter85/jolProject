@@ -79,7 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="레시피 창"
-            android:id="@+id/OCRTextView"
+            android:id="@+id/OCRTextViewW"
             />
          <LinearLayout
                 android:orientation="vertical"
@@ -100,7 +100,7 @@
                         android:textSize="20dp"
                         android:textStyle="bold"
                         android:text="nt"
-                        android:id="@+id/ntView"
+                        android:id="@+id/ntViewW"
                         />
                 </LinearLayout>
 
@@ -118,7 +118,7 @@
                         android:textSize="20dp"
                         android:textStyle="bold"
                         android:text="ct"
-                        android:id="@+id/ctView"
+                        android:id="@+id/ctViewW"
                         />
                 </LinearLayout>
 

@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.googlecode.tesseract.android.TessBaseAPI;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,3 +43,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
+
