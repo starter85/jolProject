@@ -1,5 +1,6 @@
 package com.example.gocook_;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,7 +12,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MemberLoginActivity extends AppCompatActivity {
+
+    private FirebaseAuth mFirebaseAuth;         // 파이어베이스 인증
+    private DatabaseReference mDatabaseRef;     // 실시간 데이터베이스
 
     private EditText mEmailView;            // 아이디 입력 칸
     private EditText mPwdView;              // 비밀번호 입력 칸
@@ -24,26 +35,30 @@ public class MemberLoginActivity extends AppCompatActivity {
     private ImageView mManagerLoginBtnicon; // 관리자 로그인 아이콘
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.member_login);
 
-            mEmailView = (EditText) findViewById(R.id.login_email);                 // 아이디 입력 칸
-            mPwdView = (EditText) findViewById(R.id.login_pwd);                     // 비밀번호 입력 칸
-            mLoginBtn = (Button) findViewById(R.id.btn_login);                      // 로그인 버튼
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference("GoCook");
 
-            mJoinBtn = (TextView) findViewById(R.id.btn_join);                      // 회원가입 버튼
-            mJoinBtnicon = (ImageView) findViewById(R.id.icon_join);                // 회원가입 아이콘
 
-            mManagerLoginBtn = (TextView) findViewById(R.id.btn_mlogin);            // 관리자 로그인 버튼
-            mManagerLoginBtnicon = (ImageView) findViewById(R.id.icon_mlogin);      // 관리자 로그인 아이콘
+        mEmailView = (EditText) findViewById(R.id.login_email);                 // 아이디 입력 칸
+        mPwdView = (EditText) findViewById(R.id.login_pwd);                     // 비밀번호 입력 칸
+        mLoginBtn = (Button) findViewById(R.id.btn_login);                      // 로그인 버튼
+
+        mJoinBtn = (TextView) findViewById(R.id.btn_join);                      // 회원가입 버튼
+        mJoinBtnicon = (ImageView) findViewById(R.id.icon_join);                // 회원가입 아이콘
+
+        mManagerLoginBtn = (TextView) findViewById(R.id.btn_mlogin);            // 관리자 로그인 버튼
+        mManagerLoginBtnicon = (ImageView) findViewById(R.id.icon_mlogin);      // 관리자 로그인 아이콘
 
 
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String check_id = mEmailView.getText().toString();
                 String check_pw = mPwdView.getText().toString();
                 String sup_id = "111";
@@ -53,10 +68,27 @@ public class MemberLoginActivity extends AppCompatActivity {
                     Toast myToast = Toast.makeText(getApplicationContext() ,"000님 환영합니다", Toast.LENGTH_SHORT);
                     myToast.show();
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//                    Intent intent = new Intent(getApplicationContext(), ocrActivity.class);
                     startActivity(intent); // ocr 화면 호출
                 }else{
                     Toast myToast = Toast.makeText(getApplicationContext() ,"잘못 입력되었습니다.", Toast.LENGTH_SHORT);
                     myToast.show();
+
+//                    mFirebaseAuth.signInWithEmailAndPassword(check_id, strPwd).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+//                        @Override
+//                        public void onComplete(@NonNull Task<AuthResult> task) {
+//                            if (task.isSuccessful()) {
+//                                // 로그인 성공!
+//                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+//                                startActivity(intent);
+//                                finish();
+//                            } else {
+//                                Toast.makeText(LoginActivity.this, "로그인 실패", Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+//                    });
+
+
 
                 }
             }
