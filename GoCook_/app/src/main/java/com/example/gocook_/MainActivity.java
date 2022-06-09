@@ -29,14 +29,14 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     //item을 클릭시 id값을 가져와 FrameLayout에 fragment.xml띄우기
-                    case R.id.item_home:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new MainFragment()).commit();
-                        break;
+//                    case R.id.item_home:
+//                        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new MainFragment()).commit(); // frag1
+//                        break;
                     case R.id.item_recipe:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new ReadFragment()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new ReadFragment()).commit(); // frag2
                         break;
                     case R.id.item_setting:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new SettingFragment()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, new SettingFragment()).commit(); // frag3
                         break;              }
                 return true;
             }

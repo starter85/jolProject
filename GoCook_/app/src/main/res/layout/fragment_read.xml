@@ -80,8 +80,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/ocr_button"
             android:orientation="vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginRight="40dp"
             android:padding="10dp"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <!-- 결과 출력 창 -->
             <TextView
@@ -136,12 +140,30 @@
 
         </LinearLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
             <Button
                 android:id="@+id/next_button"
-                android:layout_width="match_parent"
+                android:layout_width="340dp"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:background="@drawable/button_round"
+                android:fontFamily="@font/nanumgothic"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="80dp"
+                android:text="레시피 사용"
+                android:textColor="#fff"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="49dp"
+                tools:layout_editor_absoluteY="603dp" />
 
+
+        </RelativeLayout>
 
 
     </LinearLayout>
