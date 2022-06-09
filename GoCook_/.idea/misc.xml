@@ -22,8 +22,9 @@
         <entry key="..\:/CookAndroid/Project/jolProject/GoCook_/app/src/main/res/drawable/ic_baseline_article_24.xml" value="0.1" />
         <entry key="..\:/CookAndroid/Project/jolProject/GoCook_/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1" />
         <entry key="..\:/CookAndroid/Project/jolProject/GoCook_/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.1" />
+        <entry key="..\:/CookAndroid/Project/jolProject/GoCook_/app/src/main/res/layout/activity_register.xml" value="0.1328125" />
         <entry key="..\:/CookAndroid/Project/jolProject/GoCook_/app/src/main/res/layout/fragment_main.xml" value="0.15364583333333334" />
-        <entry key="..\:/CookAndroid/Project/jolProject/GoCook_/app/src/main/res/layout/fragment_read.xml" value="0.11778115501519756" />
+        <entry key="..\:/CookAndroid/Project/jolProject/GoCook_/app/src/main/res/layout/fragment_read.xml" value="0.11721611721611722" />
         <entry key="..\:/CookAndroid/Project/jolProject/GoCook_/app/src/main/res/layout/fragment_setting.xml" value="0.11879432624113476" />
         <entry key="..\:/CookAndroid/Project/jolProject/GoCook_/app/src/main/res/layout/main_page.xml" value="0.1" />
         <entry key="..\:/CookAndroid/Project/jolProject/GoCook_/app/src/main/res/layout/manager_login.xml" value="0.15364583333333334" />
@@ -34,6 +35,7 @@
         <entry key="..\:/CookAndroid/Project/jolProject/GoCook_/app/src/main/res/layout/user_info.xml" value="0.15364583333333334" />
         <entry key="..\:/CookAndroid/Project/jolProject/GoCook_/app/src/main/res/layout/user_list.xml" value="0.1" />
         <entry key="..\:/CookAndroid/Project/jolProject/GoCook_/app/src/main/res/layout/user_thing.xml" value="0.16530797101449277" />
+        <entry key="..\:/CookAndroid/Project/jolProject/GoCook_/app/src/main/res/menu/bottom_menu.xml" value="0.15416666666666667" />
         <entry key="..\:/CookAndroid/Project/jolProject/GoCook_/app/src/main/res/menu/bottom_nev.xml" value="0.12129629629629629" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/GoCook_/app/src/main/res/drawable/button_round.xml" value="0.2155" />
         <entry key="..\:/Users/JH/AndroidStudioProjects/GoCook_/app/src/main/res/drawable/round_button.xml" value="0.218" />

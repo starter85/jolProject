@@ -74,22 +74,19 @@ public class MemberLoginActivity extends AppCompatActivity {
                     Toast myToast = Toast.makeText(getApplicationContext() ,"잘못 입력되었습니다.", Toast.LENGTH_SHORT);
                     myToast.show();
 
-//                    mFirebaseAuth.signInWithEmailAndPassword(check_id, strPwd).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
-//                        @Override
-//                        public void onComplete(@NonNull Task<AuthResult> task) {
-//                            if (task.isSuccessful()) {
-//                                // 로그인 성공!
-//                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-//                                startActivity(intent);
-//                                finish();
-//                            } else {
-//                                Toast.makeText(LoginActivity.this, "로그인 실패", Toast.LENGTH_SHORT).show();
-//                            }
-//                        }
-//                    });
-
-
-
+                    mFirebaseAuth.signInWithEmailAndPassword(check_id, check_pw).addOnCompleteListener(MemberLoginActivity.this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                // 로그인 성공!
+                                Intent intent = new Intent(MemberLoginActivity.this, MainActivity.class);
+                                startActivity(intent);
+                                finish();
+                            } else {
+                                Toast.makeText(MemberLoginActivity.this, "로그인 실패", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
                 }
             }
         });
