@@ -40,7 +40,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MemberLoginActivity"/>
-        <activity android:name=".JoinActivity"/>
+        <activity android:name=".RegisterActivity"/>
         <activity android:name=".ManagerLoginActivity"/>
         <activity android:name=".UserThingActivity"/>
         <activity android:name=".ocrActivity"/>
