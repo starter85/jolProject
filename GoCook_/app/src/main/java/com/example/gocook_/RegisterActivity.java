@@ -114,14 +114,12 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "아이디를 입력해주세요.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-
-                if(strPwd.equals("")) {         // 공백 데이터 방지 - 비밀번호
-                    Toast.makeText(RegisterActivity.this, "비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
                 if(strName.equals("")) {        // 공백 데이터 방지 - 이름
                     Toast.makeText(RegisterActivity.this, "이름을 입력해주세요.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(strPwd.length()<6){
+                    Toast.makeText(RegisterActivity.this, "비밀번호 6자리 이상 입력해주세요", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
