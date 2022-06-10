@@ -261,8 +261,7 @@
                 android:background="@drawable/button_round"
                 android:fontFamily="@font/nanumgothic"
                 android:text=" 기본 "
-                android:textStyle="bold">
-            </Button>
+                android:textStyle="bold"></Button>
 
             <Button
                 android:id="@+id/souce_three"
@@ -273,8 +272,7 @@
                 android:background="@drawable/button_round"
                 android:fontFamily="@font/nanumgothic"
                 android:text=" 3인 "
-                android:textStyle="bold">
-            </Button>
+                android:textStyle="bold"></Button>
 
         </LinearLayout>
 
@@ -282,6 +280,81 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp">
+
+            <ImageView
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:src="@drawable/line"></ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/nanumgothic"
+                    android:text="면 끓이는 시간 : "
+                    android:textColor="#707070"
+                    android:textSize="30px"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/user_thing_nt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/nanumgothic"
+                    android:textColor="#707070"
+                    android:textSize="30px"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/nanumgothic"
+                    android:text="요리 소요 시간 : "
+                    android:textColor="#707070"
+                    android:textSize="30px"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/user_thing_ct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/nanumgothic"
+                    android:textColor="#707070"
+                    android:textSize="30px"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
             <ImageView
                 android:layout_width="330dp"
@@ -338,10 +411,31 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
             android:gravity="center"
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btnConnect"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_round"
+                android:fontFamily="@font/nanumgothic"
+                android:text="블루투스 연결"
+                android:textStyle="bold">
+
+            </Button>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/cooking_btn"
                 android:layout_width="350dp"
                 android:layout_height="50dp"
                 android:background="@drawable/button_round"

@@ -52,6 +52,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:24.1.2'
     implementation 'com.google.firebase:firebase-database:20.0.5'
 
+    // 블루투스 라이브러리 추가
+    implementation 'com.akexorcist:bluetoothspp:1.0.0'
     // OCR 라이브러리 추가!
     implementation 'com.rmtheis:tess-two:9.1.0'
 

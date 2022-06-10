@@ -71,28 +71,26 @@ public class RegisterActivity extends AppCompatActivity {
 
         mBtnIdck = findViewById(R.id.btn_idck);
 
+        mBtnIdck = findViewById(R.id.btn_idck);
+
         mBtnIdck.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                mDatabaseRef.child("userAccount").child(mEtEmail.getText().toString()).child("emailId").addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                snapshot.getValue(String.class);
-
-                                if (snapshot.exists()) {
-                                    Toast.makeText(getApplicationContext(),"이미 존재하는 이메일입니다.",Toast.LENGTH_SHORT).show();//토스메세지 출력
-                                }else{
-                                    Toast.makeText(getApplicationContext(),"사용 가능합니다.",Toast.LENGTH_SHORT).show();//토스메세지 출력
-                                }
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
-
-                            }
-                        });
-                }
+                mDatabaseRef.child("userAccount").orderByChild("emailId").equalTo(mEtEmail.getText().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if(snapshot.exists()){
+                            Toast.makeText(getApplicationContext(), "존재하는 아이디 입니다.",Toast.LENGTH_LONG).show();
+                        }
+                        else{
+                            Toast.makeText(getApplicationContext(), "사용 가능합니다.",Toast.LENGTH_LONG).show(); }
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                    }
+                });
+            }
         });
 
         mBtnRegister = findViewById(R.id.btn_register);

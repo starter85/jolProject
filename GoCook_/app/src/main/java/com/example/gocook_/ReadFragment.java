@@ -41,13 +41,16 @@ public class ReadFragment extends Fragment {
 
     Bitmap image; // 사용되는 이미지
     String datapath = ""; // 언어데이터가 있는 경로
-
     Button btn_ocr; // 텍스트 추출 버튼
     Button btn_next;
     private String imageFilePath; // 이미지 파일 경로
     private Uri p_Uri;
 //    public TessBaseAPI mTess = new TessBaseAPI(); // Tess API reference
     private TessBaseAPI mTess; // Tess API reference
+
+    // 블루투스
+    private String nt; // 면 끓이는 시간, 취향 맞춤으로 값 보내서 bt 통신에 쓸 값
+    private String ct; // 요리 시간, 취향 맞춤으로 값 보내서 bt 통신에 쓸 값
 
 
     static final int REQUEST_IMAGE_CAPTURE = 672;
@@ -87,7 +90,9 @@ public class ReadFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), UserThingActivity.class);
-                startActivity(intent);
+                intent.putExtra("nt",nt);
+                intent.putExtra("ct",ct);
+                startActivityForResult(intent,0);
             }
         });
 
@@ -199,6 +204,10 @@ public class ReadFragment extends Fragment {
                 Toast.makeText(getContext(), "요리 시간을 인식할 수 없습니다.", Toast.LENGTH_LONG).show();
             }else{
                 // index 0 : nt, index 1 : ct
+                // 전역 변수에 값 저장
+                nt = time_values[0];
+                ct = time_values[1];
+                // 값 띄우기
                 ntView.setText(time_values[0]);
                 ctView.setText(time_values[1]);
                 Toast.makeText(getContext(), time_values[0], Toast.LENGTH_LONG).show();
@@ -302,14 +311,13 @@ public class ReadFragment extends Fragment {
             ct_index = recipe_text.indexOf("분간", nt_index+2); // ct 인덱스 찾기
 
             nt = recipe_text.substring(nt_index-2, nt_index);
+            nt = nt.trim(); // 공백 제거
+            ct = recipe_text.substring(ct_index-2, ct_index);
+            ct = ct.trim(); // 공백 제거
             if (nt.equals("크")){
                 nt = "3";
             }
-            ct = recipe_text.substring(ct_index-2, ct_index);
         }
         return new String[]{nt, ct}; // 배열 형태로 반환 index
     }
-
-
-
 }
