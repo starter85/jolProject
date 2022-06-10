@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView = findViewById(R.id.bottemNavi);
 
         //처음화면
-        getSupportFragmentManager().beginTransaction().add(R.id.main_frame, new MainFragment()).commit(); //FrameLayout에 fragment.xml 띄우기
+        getSupportFragmentManager().beginTransaction().add(R.id.main_frame, new ReadFragment()).commit(); //FrameLayout에 fragment.xml 띄우기
 
         //바텀 네비게이션뷰 안의 아이템 설정
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
