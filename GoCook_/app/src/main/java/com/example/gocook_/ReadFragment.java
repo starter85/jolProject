@@ -300,7 +300,11 @@ public class ReadFragment extends Fragment {
             ct="";
         }else{
             ct_index = recipe_text.indexOf("분간", nt_index+2); // ct 인덱스 찾기
+
             nt = recipe_text.substring(nt_index-2, nt_index);
+            if (nt.equals("크")){
+                nt = "3";
+            }
             ct = recipe_text.substring(ct_index-2, ct_index);
         }
         return new String[]{nt, ct}; // 배열 형태로 반환 index

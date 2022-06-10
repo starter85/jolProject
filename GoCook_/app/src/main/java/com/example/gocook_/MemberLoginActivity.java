@@ -71,9 +71,6 @@ public class MemberLoginActivity extends AppCompatActivity {
 //                    Intent intent = new Intent(getApplicationContext(), ocrActivity.class);
                     startActivity(intent); // ocr 화면 호출
                 }else{
-                    Toast myToast = Toast.makeText(getApplicationContext() ,"잘못 입력되었습니다.", Toast.LENGTH_SHORT);
-                    myToast.show();
-
                     mFirebaseAuth.signInWithEmailAndPassword(check_id, check_pw).addOnCompleteListener(MemberLoginActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -96,7 +93,7 @@ public class MemberLoginActivity extends AppCompatActivity {
         mJoinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), JoinActivity.class);
+                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(intent); // 회원 가입 화면 호출
             }
         });
@@ -104,7 +101,7 @@ public class MemberLoginActivity extends AppCompatActivity {
         mJoinBtnicon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), JoinActivity.class);
+                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(intent); // 회원 가입 화면 호출
             }
         });
