@@ -12,30 +12,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:gravity="left">
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left">
-
-            </LinearLayout>
-
-            <ImageView
-                android:layout_width="31dp"
-                android:layout_height="26dp"
-                android:layout_marginLeft="25dp"
-                android:src="@drawable/navigation">
-
-            </ImageView>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:fontFamily="@font/nanumgothicextrabold"
-                android:text="               GoCook"
+                android:text="GoCook"
                 android:textColor="@color/black"
-                android:textSize="25dp" />
+                android:textSize="25sp" />
 
         </LinearLayout>
 
@@ -43,12 +31,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp">
-
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/line"></ImageView>
-
         </LinearLayout>
 
         <LinearLayout
@@ -64,7 +50,7 @@
                 android:fontFamily="@font/nanumgothic"
                 android:text="면 양"
                 android:textColor="#707070"
-                android:textSize="45px"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -75,7 +61,7 @@
                 android:fontFamily="@font/nanumgothic"
                 android:text="80g"
                 android:textColor="#9b111e"
-                android:textSize="30px"
+                android:textSize="13sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -86,7 +72,7 @@
                 android:fontFamily="@font/nanumgothic"
                 android:text="160g"
                 android:textColor="#9b111e"
-                android:textSize="30px"
+                android:textSize="13sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -97,7 +83,7 @@
                 android:fontFamily="@font/nanumgothic"
                 android:text="240g"
                 android:textColor="#9b111e"
-                android:textSize="30px"
+                android:textSize="13sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -116,7 +102,7 @@
                 android:fontFamily="@font/nanumgothic"
                 android:text="80g"
                 android:textColor="#707070"
-                android:textSize="45px"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -128,7 +114,7 @@
                 android:fontFamily="@font/nanumgothic"
                 android:text="0g"
                 android:textColor="#707070"
-                android:textSize="45px"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <Button
@@ -198,7 +184,7 @@
                 android:fontFamily="@font/nanumgothic"
                 android:text="소스 양"
                 android:textColor="#707070"
-                android:textSize="45px"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -209,7 +195,7 @@
                 android:fontFamily="@font/nanumgothic"
                 android:text="150g X 인"
                 android:textColor="#9b111e"
-                android:textSize="30px"
+                android:textSize="13sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -220,7 +206,7 @@
                 android:fontFamily="@font/nanumgothic"
                 android:text="기본 + 30%"
                 android:textColor="#9b111e"
-                android:textSize="30px"
+                android:textSize="13sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -239,7 +225,7 @@
                 android:fontFamily="@font/nanumgothic"
                 android:text="150g"
                 android:textColor="#707070"
-                android:textSize="45px"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -251,7 +237,7 @@
                 android:fontFamily="@font/nanumgothic"
                 android:text="0g"
                 android:textColor="#707070"
-                android:textSize="45px"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <Button
@@ -262,7 +248,7 @@
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_round"
                 android:fontFamily="@font/nanumgothic"
-                android:text=" 기본 "
+                android:text="기본"
                 android:textStyle="bold"></Button>
 
             <Button
@@ -310,7 +296,7 @@
                     android:fontFamily="@font/nanumgothic"
                     android:text="면 끓이는 시간 : "
                     android:textColor="#707070"
-                    android:textSize="30px"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -320,7 +306,7 @@
                     android:layout_marginLeft="5dp"
                     android:fontFamily="@font/nanumgothic"
                     android:textColor="#707070"
-                    android:textSize="30px"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -337,7 +323,7 @@
                     android:fontFamily="@font/nanumgothic"
                     android:text="요리 소요 시간 : "
                     android:textColor="#707070"
-                    android:textSize="30px"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -347,7 +333,7 @@
                     android:layout_marginLeft="5dp"
                     android:fontFamily="@font/nanumgothic"
                     android:textColor="#707070"
-                    android:textSize="30px"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
@@ -374,7 +360,7 @@
             android:fontFamily="@font/nanumgothic"
             android:text="재료 추가"
             android:textColor="#707070"
-            android:textSize="45px"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <CheckBox
@@ -385,7 +371,7 @@
             android:fontFamily="@font/nanumgothic"
             android:text=" 마늘 추가 [풍미] - 재료 1칸"
             android:textColor="#707070"
-            android:textSize="45px"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
         <CheckBox
@@ -396,7 +382,7 @@
             android:fontFamily="@font/nanumgothic"
             android:text=" 페퍼론치노 추가 [매운맛] - 재료 2칸"
             android:textColor="#707070"
-            android:textSize="45px"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
         <CheckBox
@@ -407,7 +393,7 @@
             android:fontFamily="@font/nanumgothic"
             android:text=" 파마산 치즈가루 [안 싱겁게] - 재료 3칸"
             android:textColor="#707070"
-            android:textSize="45px"
+            android:textSize="17sp"
             android:textStyle="bold" />
 
         <LinearLayout

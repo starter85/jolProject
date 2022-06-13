@@ -82,7 +82,7 @@
             android:clickable="true"
             android:fontFamily="@font/nanumgothic"
             android:text="회원가입"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
 
         <ImageView
             android:id="@+id/icon_join"
@@ -96,7 +96,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="   |   "
-            android:textSize="15dp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/btn_mlogin"
@@ -105,7 +105,7 @@
             android:clickable="true"
             android:fontFamily="@font/nanumgothic"
             android:text="관리자 로그인"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
 
         <ImageView
             android:id="@+id/icon_mlogin"
@@ -114,8 +114,6 @@
             android:layout_marginLeft="5dp"
             android:clickable="true"
             android:src="@drawable/setting" />
-
-
     </LinearLayout>
 
 </LinearLayout>

@@ -37,10 +37,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nanumgothicextrabold"
-                android:text="레시피 일기"
+                android:text="레시피 읽기"
                 android:layout_marginLeft="145dp"
                 android:textColor="@color/black"
-                android:textSize="25dp" />
+                android:textSize="25sp" />
 
         </LinearLayout>
 
@@ -67,7 +67,7 @@
                 android:fontFamily="@font/nanumgothic"
                 android:text="레시피 촬영"
                 android:textColor="#fff"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="49dp"
                 tools:layout_editor_absoluteY="603dp" />
@@ -92,6 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="레시피 창"
+                android:textSize="15sp"
                 android:id="@+id/OCRTextView"
                 />
             <LinearLayout
@@ -105,12 +106,12 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="20dp"
+                        android:textSize="15sp"
                         android:text="nt : "/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textSize="20dp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:text="nt"
                         android:id="@+id/ntView"
@@ -123,12 +124,12 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="20dp"
+                        android:textSize="15sp"
                         android:text="ct : "/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textSize="20dp"
+                        android:textSize="15sp"
                         android:textStyle="bold"
                         android:text="ct"
                         android:id="@+id/ctView"
@@ -157,7 +158,7 @@
                 android:layout_marginBottom="80dp"
                 android:text="레시피 사용"
                 android:textColor="#fff"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 android:textStyle="bold"
                 tools:layout_editor_absoluteX="49dp"
                 tools:layout_editor_absoluteY="603dp" />
