@@ -108,6 +108,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/user_noodleweight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
@@ -230,6 +231,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/user_sauceweight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
@@ -253,7 +255,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/souce_one"
+                android:id="@+id/sauce_one"
                 android:layout_width="67dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="35dp"
@@ -264,14 +266,14 @@
                 android:textStyle="bold"></Button>
 
             <Button
-                android:id="@+id/souce_three"
+                android:id="@+id/sauce_two"
                 android:layout_width="65dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_round"
                 android:fontFamily="@font/nanumgothic"
-                android:text=" 3인 "
+                android:text="많이"
                 android:textStyle="bold"></Button>
 
         </LinearLayout>

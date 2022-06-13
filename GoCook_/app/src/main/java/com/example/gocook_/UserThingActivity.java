@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,7 +32,14 @@ public class UserThingActivity extends AppCompatActivity {
     private String sendToDevice; // 블루투스로 아두이노에 보낼 값 담긴 변수
     private String nt; // 블루투스로 아두이노에 보낼 면 끓이는 시간 값
     private String ct; // 블루투스로 아두이노에 보낼 요리하는 시간 값
-    
+
+    private Button noodle1, noodle2, noodle3; // 면 양 버튼
+    private Button sauce1, sauce2; // 소스 양 버튼
+    private EditText user_noodleweight; // 사용자 면 양 출력 부분
+    private EditText user_sauceweight; // 사용자 소스 양 출력 부분
+    private String num_user_sauceweight; // 계산
+    private Integer result1; // 계산
+    private double result2; // 계산
 
     private BluetoothSPP bt;
 
@@ -41,6 +49,60 @@ public class UserThingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_thing); //xml , java 소스 연결
+
+        noodle1 = (Button) findViewById(R.id.noodle_one); // 1인
+        noodle2 = (Button) findViewById(R.id.noodle_two); // 2인
+        noodle3 = (Button) findViewById(R.id.noodle_three); // 3인
+
+        sauce1 = (Button) findViewById(R.id.sauce_one); // 150 x 인
+        sauce2 = (Button) findViewById(R.id.sauce_two); // 150 x 인 + 30%
+
+        user_noodleweight = (EditText) findViewById(R.id.user_noodleweight); // 사용자 면 양
+        user_sauceweight = (EditText) findViewById(R.id.user_sauceweight); // 사용자 소스 양
+
+        noodle1.setOnClickListener(new View.OnClickListener() { // 1인 버튼 클릭 시
+            @Override
+            public void onClick(View view) {
+                user_noodleweight = (EditText) findViewById(R.id.user_noodleweight);
+                user_noodleweight.setText("80g");
+            }
+        });
+
+        noodle2.setOnClickListener(new View.OnClickListener() { // 2인 버튼 클릭 시
+            @Override
+            public void onClick(View view) {
+                user_noodleweight = (EditText) findViewById(R.id.user_noodleweight);
+                user_noodleweight.setText("160g");
+            }
+        });
+
+        noodle3.setOnClickListener(new View.OnClickListener() { // 3인 버튼 클릭 시
+            @Override
+            public void onClick(View view) {
+                user_noodleweight = (EditText) findViewById(R.id.user_noodleweight);
+                user_noodleweight.setText("240g");
+            }
+        });
+
+        sauce1.setOnClickListener(new View.OnClickListener() { // 소스 기본 버튼
+            @Override
+            public void onClick(View view) {
+                num_user_sauceweight = user_noodleweight.getText().toString().replace("g", "");
+                result1 = Integer.parseInt(num_user_sauceweight) / 80 * 150;
+                user_sauceweight.setText(result1+"g");
+            }
+        });
+
+        sauce2.setOnClickListener(new View.OnClickListener() { // 소스 많게 버튼
+            @Override
+            public void onClick(View view) {
+                num_user_sauceweight = user_noodleweight.getText().toString().replace("g", "");
+                result1 = Integer.parseInt(num_user_sauceweight) / 80 * 150;
+                result2 = Integer.parseInt(String.valueOf(result1)) * 0.3;
+                user_sauceweight.setText(result1+result2+"g");
+            }
+        });
+
 
         // 블루투스 객체 생성 후 미리 선언한 변수에 넣음
         bt = new BluetoothSPP(this); //Initializing
@@ -208,6 +270,4 @@ public class UserThingActivity extends AppCompatActivity {
             }
         }
     }
-
-
 }
