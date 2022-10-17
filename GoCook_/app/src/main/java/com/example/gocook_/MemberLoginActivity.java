@@ -64,16 +64,27 @@ public class MemberLoginActivity extends AppCompatActivity {
                 String sup_id = "111";
                 String sup_pw = "111";
 
+                // 아이디와 패스워드 공백 시 리턴 처리
+                if(check_id == null || check_id.isEmpty() && check_pw == null || check_pw.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "아이디와 패스워드를 입력해주세요.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+//                else if(check_pw == null || check_pw.isEmpty()){
+//                    Toast.makeText(getApplicationContext(), "Enter New Password", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+
                 if(check_id.equals(sup_id) && check_pw.equals(sup_pw)){
                     Toast myToast = Toast.makeText(getApplicationContext() ,"000님 환영합니다", Toast.LENGTH_SHORT);
                     myToast.show();
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//                    Intent intent = new Intent(getApplicationContext(), ocrActivity.class);
+                    // Intent intent = new Intent(getApplicationContext(), ocrActivity.class);
                     startActivity(intent); // ocr 화면 호출
                 }else{
                     mFirebaseAuth.signInWithEmailAndPassword(check_id, check_pw).addOnCompleteListener(MemberLoginActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
+
                             if (task.isSuccessful()) {
                                 // 로그인 성공!
                                 Intent intent = new Intent(MemberLoginActivity.this, MainActivity.class);
@@ -87,7 +98,6 @@ public class MemberLoginActivity extends AppCompatActivity {
                 }
             }
         });
-
 
         // 회원가입 로그인 버튼 클릭 이벤트
         mJoinBtn.setOnClickListener(new View.OnClickListener() {
