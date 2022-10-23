@@ -238,7 +238,7 @@ public class UserThingActivity extends AppCompatActivity {
     }
     // 블루투스 사용 - 데이터 전송
     public void setup() {
-        Button cooking_btn = findViewById(R.id.cooking_btn);
+        Button cooking_btn = findViewById(R.id.cooking_btn); // 요리하기 버튼
         cooking_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
